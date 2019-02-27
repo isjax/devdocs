@@ -1,5 +1,5 @@
 # Script Management #
-## Motivation ##
+## Motivation
 * Change is inevitable
     * Symphony updates may introduce breaking changes to customer scripts
         * Schema changes
@@ -13,7 +13,7 @@
     * In the past we have treated scripts as individual items to be delivered
         * Scripts that were dependent on the CL were delivered with a script to install the CL
     * The most recent set of scripts for Riachuelo were delivered as a single package containing the CL
-## Options for managing script changes ##
+## Options for managing script changes
 * Snapshot delivery
     * The CL is versioned in SVN
     * A snapshot of all of the customer scripts (dependent on the CL or all scripts) is kept as a single package including the CL
@@ -30,6 +30,6 @@
         * This only works if the client uses the setup script to manage the SQLS objects.
         * This approach is more suited to procedures, functions and types than scripts. Scripts are not stored in the database, the only reason to use a setup script is to add the necessary version metadata as opposed to the other objects which need a setup script or scripts to add them to the database. This is somewhat unnatural and harder to enforce.
         * If the customer/implementor don't follow the process exactly than the system will not achieve its goals. This makes the process brittle.
-## General Limitations ##
+## General Limitations
 * We have no control over the script after it has been delivered; customers may make changes without our knowledge.
 * There is no way to enforce the necessary behavior with either approach, however with the snapshot approach the responsibility for working 'properly' is on us and not the customer.
